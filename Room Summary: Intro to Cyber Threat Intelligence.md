@@ -1,35 +1,71 @@
+# Room Summary: Intro to Cyber Threat Intelligence  
+**Platform:** TryHackMe  
+**Difficulty:** Easy  
 
-Room Summary: Intro to Cyber Threat Intelligence
-TryHackMe  |  Difficulty: Easy  
-*
-1. What did the room actually teach?
-The room teaches you how to take a raw piece of suspicious data - like an IP address or a file - and turn it into something you can act on. It walks through a structured six-step process that analysts use to collect, evaluate, and share threat intelligence. It also introduces the main frameworks the industry uses to label and communicate threats consistently.
+---
 
-2. Key Concepts
-| Concept | What it means simply | Why it matters |
-| --- | --- | --- |
-| IOC | A clue that something bad happened | Gives you something concrete to investigate |
-| Enrichment | Looking up an indicator across multiple sources | Turns a data point into a decision |
-| TLP | A label that tells you who you can share intel with | Prevents accidental leaks to the wrong people |
-| CTI Lifecycle | A six-step loop from question to action | Keeps intelligence from piling up unused |
-| Kill Chain | A map of the 7 stages of an attack | Helps you figure out where in the attack you are |
-| MITRE ATT&CK | A numbered catalog of attacker techniques | Gives everyone on the team the same language |
+## 1. What Did the Room Actually Teach?
 
-3. What type of intelligence is this?
-Primarily Tactical Intelligence
-The room focuses on handling indicators and mapping attacker techniques, which supports immediate defensive actions. While it touches on operational concepts like the Kill Chain, the emphasis is on technical application rather than campaign-level analysis.
+The room teaches how to take a raw piece of suspicious data — such as an IP address or a file hash — and transform it into actionable intelligence.  
 
-4. If I were a CTI analyst in an organization -
-•	I would use the enrichment process to triage every incoming alert with a consistent method instead of guessing
-•	I would map alerts to Kill Chain stages to recognize when separate events are actually one connected attack
-•	I would use ATT&CK IDs so the next analyst doesn't have to re-interpret what I found
-•	I would use TLP correctly when sharing indicators with partner organizations to protect the investigation
+It walks through a structured six-step process analysts use to collect, evaluate, enrich, and share threat intelligence.  
 
-5. What felt clear? 
-The progression from data to information to intelligence felt natural. A raw indicator without context genuinely is useless, and the room made that logic easy to follow. The Kill Chain also clicked quickly because attacks are never a single event — mapping the stages gives the whole picture a shape.
+Additionally, it introduces the core industry frameworks used to label, categorize, and communicate threats in a consistent and standardized way.
 
-6. What was less clear? 
-The enrichment tools were introduced quickly and it was hard to get a feel for which one to reach for first in a real situation. Knowing that VirusTotal exists is one thing — knowing when to use it over Shodan or URLhaus in the middle of a live triage is something that only becomes clear with repetition.
+---
 
-7. One question I want to explore further: When triaging a live alert, is there a standard order for running enrichment tools — or does it depend entirely on the indicator type and context?
+## 2. Key Concepts
 
+| Concept | What It Means (Simply) | Why It Matters |
+|----------|-------------------------|----------------|
+| IOC (Indicator of Compromise) | A clue that something malicious may have occurred | Provides a concrete starting point for investigation |
+| Enrichment | Looking up an indicator across multiple intelligence sources | Transforms raw data into contextual intelligence |
+| TLP (Traffic Light Protocol) | A classification label controlling information sharing | Prevents accidental exposure of sensitive intelligence |
+| CTI Lifecycle | A structured six-step loop from question to action | Ensures intelligence supports decisions instead of accumulating unused |
+| Cyber Kill Chain | A 7-stage model describing how attacks unfold | Helps determine where an organization is in the attack process |
+| MITRE ATT&CK | A structured framework cataloging attacker techniques | Creates a shared language across security teams |
+
+---
+
+## 3. What Type of Intelligence Is This?
+
+**Primarily Tactical Intelligence**
+
+The room focuses on handling indicators and mapping attacker techniques in a way that supports immediate defensive actions.  
+
+While it introduces operational concepts like the Kill Chain, the main emphasis is on technical application rather than long-term campaign or strategic risk analysis.
+
+---
+
+## 4. If I Were a CTI Analyst in an Organization
+
+- I would use the enrichment process to triage every incoming alert using a consistent and repeatable methodology.
+- I would map alerts to Kill Chain stages to identify whether seemingly separate events are part of a coordinated attack.
+- I would reference MITRE ATT&CK technique IDs to ensure findings are clearly understood by other analysts.
+- I would apply TLP classifications correctly when sharing intelligence with partners to protect investigative integrity.
+
+---
+
+## 5. What Felt Clear?
+
+The transition from **data → information → intelligence** felt logical and intuitive.  
+
+A raw indicator without context has limited value, and the room clearly demonstrated how enrichment and analysis provide meaning.  
+
+The Kill Chain framework also resonated strongly — attacks are rarely single isolated events, and mapping stages provides structural clarity.
+
+---
+
+## 6. What Was Less Clear?
+
+The enrichment tools were introduced quickly, making it difficult to understand which tool should be prioritized during a live triage scenario.  
+
+Knowing that tools such as VirusTotal, Shodan, and URLhaus exist is different from understanding when and why to use each in practice.  
+
+This distinction likely becomes clearer with repetition and applied experience.
+
+---
+
+## 7. Question for Further Exploration
+
+When triaging a live alert, is there a structured or recommended order for enrichment tools — or does the workflow depend entirely on the indicator type and contextual factors?
